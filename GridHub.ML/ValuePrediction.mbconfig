@@ -1,0 +1,463 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Users\\User\\Downloads\\GeracaoEnergia.txt",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Temperature",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "HourOfDay",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "CloudCoverage",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "WindSpeed",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "EnergyGenerated",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.98145453086312151,
+        "RuntimeInSeconds": 1.333,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ],
+            "InputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.17538912706300844,
+            "NumberOfTrees": 2495,
+            "SubsampleFraction": 0.22781652608142372,
+            "MaximumBinCountPerFeature": 340,
+            "FeatureFraction": 0.76943583298420948,
+            "L1Regularization": 4.65137313316395E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.98112752262371772,
+        "RuntimeInSeconds": 2.056,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ],
+            "InputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 1602,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.070256796074597533,
+            "NumberOfTrees": 1865,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 234,
+            "FeatureFraction": 0.99376020894662609,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmRegression",
+        "Score": 0.98023381385333441,
+        "RuntimeInSeconds": 3.141,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e4",
+          "e0": {
+            "OutputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ],
+            "InputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 6086,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.028143234859104586,
+            "NumberOfTrees": 1234,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 160,
+            "FeatureFraction": 0.99999999,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 0.15390240008548309,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "NumberOfTrees": 4,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "LearningRate": 0.099999999999999978,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.97948866980784166,
+        "RuntimeInSeconds": 0.448,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2",
+          "e0": {
+            "OutputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ],
+            "InputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 39,
+            "MinimumExampleCountPerLeaf": 5,
+            "NumberOfTrees": 148,
+            "MaximumBinCountPerFeature": 49,
+            "FeatureFraction": 0.99999999,
+            "LearningRate": 0.026082522242306967,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "FastTreeRegression",
+        "Score": 0.978569504850169,
+        "RuntimeInSeconds": 0.282,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2",
+          "e0": {
+            "OutputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ],
+            "InputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "Temperature",
+              "HourOfDay",
+              "CloudCoverage",
+              "WindSpeed"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e2": {
+            "NumberOfLeaves": 6,
+            "MinimumExampleCountPerLeaf": 14,
+            "NumberOfTrees": 82,
+            "MaximumBinCountPerFeature": 926,
+            "FeatureFraction": 0.99999999,
+            "LearningRate": 0.0804169911649563,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e3": {
+            "NumberOfTrees": 4,
+            "NumberOfLeaves": 4,
+            "FeatureFraction": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e4": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 1.0,
+            "NumberOfTrees": 4,
+            "SubsampleFraction": 1.0,
+            "MaximumBinCountPerFeature": 255,
+            "FeatureFraction": 1.0,
+            "L1Regularization": 2E-10,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e5": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 1.0,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          },
+          "e6": {
+            "L1Regularization": 1.0,
+            "L2Regularization": 0.1,
+            "LabelColumnName": "EnergyGenerated",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ReplaceMissingValues",
+      "e1": "Concatenate",
+      "e2": "FastTreeRegression",
+      "e3": "FastForestRegression",
+      "e4": "LightGbmRegression",
+      "e5": "LbfgsPoissonRegressionRegression",
+      "e6": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * (e2 + e3 + e4 + e5 + e6)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\Users\\User\\Desktop\\GridHub\\GridHub.ML\\ValuePrediction.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 1,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 60,
+    "LabelColumn": "EnergyGenerated",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}
