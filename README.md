@@ -1,17 +1,8 @@
-![Logo Preto](https://i.imgur.com/YBfWeLJ.png)
-
 -----
 ## API Web ASP.NET Core para cadastro de investimento coletivo para a instalação de Microgrids e incentivo a utilização de energia verde, com possibilidade de demonstrar interesse em alugar seu espaço para instalação!
 -----
 GridHub é uma plataforma de financiamento coletivo que visa viabilizar a instalação de microgrids e promover o consumo de energia verde. Através de um modelo colaborativo, conecta investidores, consumidores e proprietários de espaços, permitindo que todos participem da transição para uma matriz energética mais sustentável. A plataforma oferece a oportunidade de financiar projetos de microgrids, adotar energia limpa e obter retorno financeiro, ao mesmo tempo em que contribui para a redução da pegada de carbono. Com transparência e monitoramento em tempo real, o GridHub facilita a gestão dos projetos e potencializa o impacto ambiental positivo.
 -----
-## Integrantes do Grupo
-- **Breno Lemes Santiago** - RM: 552270
-- **Felipe Guedes Gonçalves** - RM: 550906
-- **Luiz Fellipe Soares de Sousa Lucena** - RM: 551365
-- **Nina Rebello Francisco** - RM: 99509
-- **Vitória Maria de Camargo** - RM: 552344
-
 ## Documentação da API - Swagger
 
 A documentação está disponível no navegador quando o programa está em execução.
@@ -123,10 +114,3 @@ Usei **Health Check** para monitorar automaticamente a saúde dos serviços da m
 - **.NET SDK**: Certifique-se de ter o .NET SDK instalado. Você pode baixar a versão mais recente do [site oficial do .NET](https://dotnet.microsoft.com/download).
 
 - **Banco de Dados**: O projeto usa um banco de dados SQL Developer - Oracle. Certifique-se de ter uma instância disponível e atualize a string de conexão no arquivo `appsettings.json` se necessário.
-
-### Passos para Executar a API
-
-1. **Clone o Repositório**
-
-   ```bash
-   git clone https://RM552344@dev.azure.com/RM552344/GlobalSolution/_git/GlobalSolution
